@@ -186,10 +186,6 @@ void* arraySum(void* threadSlice)
     long long int threadSum = 0;
     thread_data_t* slicedThread = (thread_data_t*)threadSlice;
 
-    //to the grader, I just want to let you know I spent about 4 hours trying to debug the code
-    //when it turns out that every problem I Was having was becuase
-    //slicedThread->endInd was not slicedThread->endInd + 1
-
     for(int index = slicedThread->startInd; index < slicedThread->endInd + 1; index++)
     {
         threadSum += slicedThread->data[index];
